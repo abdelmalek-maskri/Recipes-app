@@ -35,4 +35,8 @@ nav a:last-child:hover{
 
 }
 
+.App.dark{
+    background-color: #333;
+}
+
 

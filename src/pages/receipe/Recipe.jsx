@@ -3,13 +3,17 @@ import './Recipe.css'
 import React from 'react'
 import { useFetch } from '../../hooks/useFetch';
 import 'ldrs/ring'
+import { useTheme } from '../../hooks/useTheme';
 
 
 export default function Recipe() {
   const { id } = useParams();
   const {data, isLoading, error} = useFetch('http://localhost:3000/recipes/' + id)
+
+  const { mode } = useTheme()
+
   return (
-    <div className='recipe'>
+    <div className={`recipe ${mode}`}>
       {error && (<div className='error'>{error}</div>)}
       {isLoading && (<l-ring className='loading' size="40" stroke="5" bg-opacity="0" speed="2" color="black"></l-ring>)}
       {data && (
