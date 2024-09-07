@@ -1,13 +1,18 @@
-import React from 'react'
 import './Navbar.css'
 import { NavLink, Outlet } from 'react-router-dom'
 import SearchBar from './SearchBar'
+import { useTheme } from '../hooks/useTheme'
+
+
 
 function Navbar() {
+
+    const { color, changeColor } = useTheme();
+
   return (
     <>
-        <header>
-            <nav>
+        <header style={{background: color}}>
+            <nav onClick={() => changeColor('lightblue')}>
                 <NavLink to="/" className="brand">
                     <h1>Recipe APP</h1>
                 </NavLink>

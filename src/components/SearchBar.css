@@ -5,3 +5,11 @@
 .search-bar input{
     margin-left: 5px;
 }
+.search-bar button{
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: white;
+}
