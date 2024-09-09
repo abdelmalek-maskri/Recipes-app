@@ -4,6 +4,7 @@ This Recipe App allows users to view, search, and create their own recipes. It i
 
 Stay tuned for upcoming improvements, as I plan to integrate APIs and reinforce the app with AI functionality. The database is ready, but hasn't been published yet.
 
+**Live Demo**: You can check out the app live at [perfecto-recipes.netlify.app](https://perfecto-recipes.netlify.app)
 ## Features
 
 - **Recipe Listing**: Display a list of recipes in a grid format.
