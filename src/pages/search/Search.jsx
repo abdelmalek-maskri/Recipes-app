@@ -4,7 +4,7 @@ import './Search.css'
 import React from 'react'
 import { useFetch } from '../../hooks/useFetch';
 import RecipeList from '../../components/RecipeList';
-
+import { useTheme } from '../../hooks/useTheme';
 export default function Search() {
 
   const queryString = useLocation().search
@@ -18,8 +18,11 @@ export default function Search() {
   const filteredData = data?.filter(recipe => 
     recipe.title.toLowerCase().includes(query.toLowerCase())
   );
+
+  const {mode} = useTheme();
+
   return (
-    <div>
+    <div className={`search ${mode}`}>
       <h2 className="page-title">Recipes including "{query}"</h2>
       {error && <p className="error">{error}</p>}
       {isPending && <p className="loading">Loading...</p>}

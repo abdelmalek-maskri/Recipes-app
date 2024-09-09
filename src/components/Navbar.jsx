@@ -12,7 +12,7 @@ function Navbar() {
     const { mode } = useTheme()
   return (
     <div className={`App ${mode}`}>
-        <header style={{background: color}}>
+        <header>
             <nav>
                 <NavLink to="/" className="brand">
                     <h1>Recipe APP</h1>
@@ -24,7 +24,6 @@ function Navbar() {
             </nav>
         </header>
         <main>
-            <ThemeSelector/>
             <Outlet />
         </main>
     </div>

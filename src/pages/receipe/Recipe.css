@@ -4,11 +4,12 @@
     text-align: center;
     padding: 40px;
     box-sizing: border-box;
-    background-color: white;
+    background-color:#CEDED6;
+    border-radius: 7px;
+
 }
 
 .recipe ul{
-    border: 1px solid beige;
     display: flex;
     justify-content: center;
     padding: 10px;
@@ -31,10 +32,22 @@
 .method{
     text-align: left;
     line-height: 1.5em;
-
+    text-align: justify;
+    margin-bottom: 10px;
+    font-size: 0.84em;
 }
 
+
+/* dark  mode */
 .recipe.dark{
-    background-color: #555;
-    color: #e4e4e4;
+    color: #E2E8F0;
+    background-color: #282f37;
+    box-shadow: 0 4px 6px rgba(96, 165, 250, 0.5);
+}
+
+.recipe.dark h1{
+    color: white;
+}
+.recipe.dark li{
+    color: #d1d2d3;
 }

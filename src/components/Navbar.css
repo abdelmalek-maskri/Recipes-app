@@ -1,8 +1,10 @@
 header{
-    background-color: #58249c;
+    background-color: #62937F;
     padding: 20px;
-    color: #fff;
+    color: black;
+    font-family: 'Poppins', sans-serif;
 }
+
 
 header nav{
     display: flex;
@@ -16,27 +18,50 @@ nav a.brand{
     text-decoration: none;
 }
 nav a.brand:hover{
-    color: #58249c;
-    background-color: white;
+    color: #4A6D5F;
+    background-color: #B6CDC4;
     border-radius: 5px;
 }
 
 nav a:last-child{
     color: white;
     text-decoration: none;
-    margin-left: 40px;
+    margin-left: auto;
     padding: 8px;
-    border: 1px solid white;
+    border: 1px solid #CEDED8;
     border-radius: 4px;
 }
 nav a:last-child:hover{
-    color: #333;
-    background-color: white;
+    color: #4A6D5F;
+    background-color: #CEDED8;
 
 }
+/* dark mode */
 
 .App.dark{
-    background-color: #333;
+    background: linear-gradient(to right, #1E293B, #0F172A);
+}
+.App.dark header{
+    background: linear-gradient(to right, #1E293B, #0F172A);
+}
+.App.dark nav a.brand{
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.App.dark nav a.brand:hover{
+    box-shadow: 0 4px 6px rgba(96, 165, 250, 0.5);
+    background-color: #1E293B;
+}
+
+.App.dark nav a:last-child{
+    color: white;
+    background-color: #1E293B;
+    border-radius: 5px;
+}
+.App.dark nav a:last-child:hover{
+    box-shadow: 0 4px 6px rgba(96, 165, 250, 0.5);
+    background-color: #1E293B;
 }
 
 

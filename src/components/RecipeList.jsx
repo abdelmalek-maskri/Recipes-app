@@ -5,7 +5,7 @@ import { useTheme } from '../hooks/useTheme'
 
 export default function RecipeList({ recipes }) {
 
-  const { mode } = useTheme()
+  const { mode , color } = useTheme()
 
   if(recipes.length === 0){
     return (
@@ -17,8 +17,8 @@ export default function RecipeList({ recipes }) {
     <div className='recipe-list'>
       {recipes.map(recipe => (
         <div className={`card ${mode}`} key={recipe.id}>
-            <h3>{recipe.title}</h3>
-            <p>Takes {recipe.cookingTime} to cook</p>
+            <h3 style={{color}}>{recipe.title}</h3>
+            <p className='cook-time'>Takes {recipe.cookingTime} to cook</p>
             <div>
             {recipe.method.substring(0, 100)}...
             </div>

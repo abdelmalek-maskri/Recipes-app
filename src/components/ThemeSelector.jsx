@@ -3,7 +3,7 @@ import './ThemeSelector.css'
 import { useTheme } from '../hooks/useTheme';
 import Icon from '../assets/icon.svg'
 
-const colors =['#58429c', '#249c6b', '#b70233'];
+const colors =['#fff', '#EEF36A', '#999'];
 
 export default function ThemeSelector() {
 
@@ -12,7 +12,6 @@ export default function ThemeSelector() {
     function toggleMode(){
         changeMode(mode === 'dark' ? 'light' : 'dark');
     }
-    console.log(mode);
 
   return (
     <div className='theme-selector'>

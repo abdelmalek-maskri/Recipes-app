@@ -8,6 +8,7 @@ import Search from "./pages/search/Search";
 import Create from "./pages/create/Create";
 import Recipe from "./pages/receipe/Recipe";
 import Navbar from "./components/Navbar";
+import ThemeSelector from "./components/ThemeSelector";
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
@@ -16,7 +17,11 @@ export const router = createBrowserRouter(
         element={<Navbar />}
       >
         <Route>
-          <Route index element={<Home />} />
+          <Route index element={<>
+                                  <ThemeSelector />
+                                  <Home/>
+                                </>} 
+          />
           <Route
             path="search"
             element={<Search />}

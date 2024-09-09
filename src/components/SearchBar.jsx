@@ -15,14 +15,15 @@ export default function SearchBar() {
   return (
     <div className='search-bar'>
         <form onSubmit={handleSubmit}>
-            <label forhtml="search">Search</label>
             <input 
                 id='search'
                 type='text'
                 required
                 onChange={(e) => {setTerm(e.target.value)}}
                 value={term}
+                placeholder='Search for recipes'
             />
+            <label htmlFor="search" onClick={handleSubmit}>Search</label>
             
       </form>
     </div>
