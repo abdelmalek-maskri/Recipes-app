@@ -33,30 +33,17 @@ To run this app, you need to have the following:
 1. Clone the repository to your local machine.
    ```bash
    git clone https://github.com/yourusername/recipe-app.git
-Navigate into the project directory.
-bash
-Copy code
-cd recipe-app
-Install the necessary dependencies.
-bash
-Copy code
-npm install
-Run json-server to serve the mock API.
-bash
-Copy code
-npx json-server --watch data/db.json --port 8000
-Start the React application.
-bash
-Copy code
-npm start
-Theming
+
+
 The app includes dark and light modes, which can be switched via the ThemeSelector component. These themes are applied globally across the app.
 
 Example
 The current default theme color is a soothing green #62937F. Feel free to customize the theme color by modifying the theme provider context.
 
 
+## Stay Tuned
 
+I'm working hard to improve this app by integrating more features and making it smarter using AI. The app's database is ready but hasn't been published to GitHub yet. More exciting updates are coming soon!
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
