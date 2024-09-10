@@ -1,20 +1,20 @@
 import firebase from 'firebase/app';
-import 'firebase/firestore'
+import 'firebase/firestore';
 
+// Use environment variables for Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyAIuFVi2RjMIi7788tLNetIHurNbp02yLk",
-    authDomain: "recipe-site-7b9fd.firebaseapp.com",
-    projectId: "recipe-site-7b9fd",
-    storageBucket: "recipe-site-7b9fd.appspot.com",
-    messagingSenderId: "1064960150100",
-    appId: "1:1064960150100:web:cfe6be986f46e9273dfbc1"
-  };
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_FIREBASE_APP_ID
+};
 
-//inintialize firebase
+// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-//inintialize services (firestore)
+// Initialize Firestore
 const projectFirestore = firebase.firestore();
 
-
-export { projectFirestore }
+export { projectFirestore };
