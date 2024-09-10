@@ -3,7 +3,7 @@ import { useFetch} from '../../hooks/useFetch';
 import './Create.css'
 import { useTheme } from '../../hooks/useTheme';
 import React, { useEffect, useRef, useState } from 'react'
-
+import { projectFirestore } from '../../firebase/config';
 export default function Create() {
   const [title, setTitle] = useState('');
   const [method, setMethod] = useState('');
@@ -12,22 +12,23 @@ export default function Create() {
   const [ingredients, setIngredients] = useState([]);
   const ingredientInput = useRef(null);
 
+
+
   const navigate = useNavigate()
 
-  const {data, error, postData} = useFetch('http://localhost:3000/recipes', "POST")
 
-  function handleSubmit(e){
+
+  async function handleSubmit(e){
     e.preventDefault();
-    postData({title, ingredients, method, cookingTime: cookingTime + " minutes"});
-
+    const doc = {title, ingredients, method, cookingTime: cookingTime + " minutes"};
+    try{
+      await projectFirestore.collection('recipes').add(doc);
+      navigate('/');
+    }catch(err){
+      console.log(err)
+    }
   }
 
-  useEffect(() => {
-    if(data){
-      navigate('/');
-    }
-
-  }, [data])
 
   function handleAdd(e){
     e.preventDefault();
@@ -65,8 +66,7 @@ export default function Create() {
               onChange={(e) => setNewIngredient(e.target.value)} 
               value={newIngredient}
               ref={ingredientInput}
-              placeholder='add an ingredient'
-              required
+              placeholder='add an ingredient' 
             />
             <button onClick={handleAdd}>Add</button>
           </div>
