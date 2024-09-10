@@ -2,7 +2,7 @@ import React from 'react'
 import  './RecipeList.css'
 import { Link } from 'react-router-dom'
 import { useTheme } from '../hooks/useTheme'
-import TrashCan from '../assets/trashcan.svg'
+import TrashCan from '../assets/trashCan.svg'
 import { projectFirestore } from '../firebase/config'
 
 export default function RecipeList({ recipes }) {
